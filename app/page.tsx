@@ -19,7 +19,7 @@ export default function Home() {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/history')
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/history`)
       const json = await res.json()
       setHistory(json)
     } catch (err) {
@@ -28,7 +28,7 @@ export default function Home() {
   }
   const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/latest')
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/latest`)
       const json = await res.json()
       setData(json)
     } catch (error) {
