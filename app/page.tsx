@@ -98,7 +98,7 @@ export default function Dashboard() {
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-red-500">Distance</h3>
-                <p className="text-text-green-700 ">{latest.distance} cm</p>
+                <p className="text-2xl text-green-700 ">{latest.distance} cm</p>
               </div>
             </>
           ) : (
@@ -129,8 +129,8 @@ export default function Dashboard() {
             <tbody>
               {alerts.map((alert, index) => (
                 <tr key={index} className="border-t">
-                  <td className="p-3">{new Date(alert.timestamp).toLocaleString()}</td>
-                  <td className="p-3">{alert.message}</td>
+                  <td className="p-3  text-red-500 ">{new Date(alert.timestamp).toLocaleString()}</td>
+                  <td className="p-3  text-red-500">{alert.message}</td>
                 </tr>
               ))}
             </tbody>
